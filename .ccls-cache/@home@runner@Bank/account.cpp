@@ -1,11 +1,10 @@
-class Account {
+#include "account.h"
 
-private:
-  int accountNumber;
-  int balance;
+Account::Account(int accountNumber, int balance) {
+  this->accountNumber = accountNumber;
+  this->balance = balance;
+}
 
-public:
-  Account(int accountNumber, int balance);
-  int getAccountNumber() { return accountNumber; }
-  int getBalance() { return balance; }
-};
+int Account::getAccountNumber() { return accountNumber; }
+int Account::getBalance() { return balance; }
+void Account::setBalance(int balance) { this->balance = balance; }
