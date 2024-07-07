@@ -1,4 +1,5 @@
 #include "account.h"
+
 #include <string>
 #include <unordered_map>
 
@@ -7,5 +8,5 @@ private:
   std::unordered_map<std::string, Account> accounts;
 
 public:
-  int createAccount();
+  int createAccount(User user, int balance);
 };

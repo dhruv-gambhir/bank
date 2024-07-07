@@ -7,5 +7,5 @@ private:
   std::unordered_map<std::string, Account> accounts;
 
 public:
-  int createAccount();
+  int createAccount(User user, int balance);
 };

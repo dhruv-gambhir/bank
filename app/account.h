@@ -1,24 +1,20 @@
 #include <string>
 
-enum Gender { MALE, FEMALE, OTHER };
-
-struct User {
+struct BankUser {
   std::string name;
   std::string phoneNumber;
-  Gender gender;
-}
+  std::string password;
+};
 
 class Account {
 
 private:
-  int accountNumber;
-  int balance;
-  User user;
-  
-
-public:
-  Account(int accountNumber, int balance);
-  int getAccountNumber();
-  int getBalance();
+  std::string accountNumber;
+  float balance;
+  BankUser user;
   void setBalance(int balance);
+public:
+  Account(std::string accountNumber, float balance);
+  std::string getAccountNumber();
+  float getBalance();
 };
