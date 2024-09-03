@@ -1,20 +1,23 @@
-#include <string>
+#ifndef ACCOUNT_H
+#define ACCOUNT_H
 
-struct BankUser {
-  std::string name;
-  std::string phoneNumber;
-  std::string password;
-};
+#include <string>
+#include "bank_user.h"
 
 class Account {
 
 private:
   std::string accountNumber;
   float balance;
-  BankUser user;
-  void setBalance(int balance);
+  void setBalance(float balance);
 public:
   Account(std::string accountNumber, float balance);
   std::string getAccountNumber();
   float getBalance();
+  void addMoney(float addedAmount);
+  void deductMoney(float deductedMoney);
+
+
 };
+
+#endif

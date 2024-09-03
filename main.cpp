@@ -8,9 +8,8 @@ int main() {
 
   string name;
   string phone;
-  string password;
+  string pin;
 
-  AccountManager manager;
 
   while (true) {
     cout << "Welcome to the Bank. Please select an option.\n\n 1. Existing "
@@ -23,8 +22,8 @@ int main() {
       cin >> name;
       cout << "Enter phone number";
       cin >> phone;
-      cout << "Enter password";
-      cin >> password;
+      cout << "Enter a six digit pin";
+      cin >> pin;
       break;
 
     case 2:
@@ -32,9 +31,8 @@ int main() {
       cin >> name;
       cout << "Enter phone number";
       cin >> phone;
-      cout << "Enter password";
-      cin >> password;
-      manager.createAccount({name, phone, password}, 0);
+      cout << "Enter a six digit pin";
+      cin >> pin;
     }
     std::cout << "\n*******************\n\n";
   }
